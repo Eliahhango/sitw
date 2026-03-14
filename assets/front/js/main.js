@@ -37,6 +37,73 @@ function popupAnnouncement($this) {
     }
   }
 
+function initSiteMotion() {
+    const body = document.body;
+
+    if (!body) {
+        return;
+    }
+
+    body.classList.add('motion-enhanced');
+
+    const selector = [
+        'section .container > .row > [class*="col-"]',
+        '.blog-post-item',
+        '.widget',
+        '.post-item',
+        '.portfolio-item',
+        '.single-service',
+        '.single-feature',
+        '.single-pricing',
+        '.single-testimonial',
+        '.single-team',
+        '.single-counter',
+        '.single-box',
+        '.single-page-wrapper',
+        '.contact-form-wrapper',
+        '.faq-area .card',
+        '.card',
+        '.saas-footer .col-lg-4',
+        '.template-footer .col-lg-4',
+        '.footer-area .col-lg-4'
+    ].join(',');
+
+    const nodes = Array.from(document.querySelectorAll(selector)).filter(function(node) {
+        return !node.closest('.slick-cloned');
+    });
+    const uniqueNodes = Array.from(new Set(nodes));
+
+    uniqueNodes.forEach(function(node, index) {
+        node.classList.add('reveal-on-scroll');
+        node.style.setProperty('--reveal-delay', Math.min((index % 4) * 80, 240) + 'ms');
+    });
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        uniqueNodes.forEach(function(node) {
+            node.classList.add('site-reveal-visible');
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('site-reveal-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -12% 0px'
+    });
+
+    uniqueNodes.forEach(function(node) {
+        observer.observe(node);
+    });
+}
+
 $(function() {
 
     saas_theme = {
@@ -326,6 +393,7 @@ $(function() {
     
     // wow min js
     new WOW().init();
+    initSiteMotion();
 
     $('.offer-timer').each(function() {
         let $this = $(this);
