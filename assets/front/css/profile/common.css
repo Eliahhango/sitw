@@ -797,3 +797,12 @@ ul#anetErrors {
     padding-inline-start: 16px !important;
     padding-top: 10px !important;
 }
+
+/* Keep header navigation labels in normal casing across all themes. */
+.header-navigation .main-menu ul li a,
+.header-area .main-menu ul li a,
+.template-header .navbar .nav-link,
+.navbar-nav .nav-link,
+.menu-item > a {
+    text-transform: none !important;
+}
