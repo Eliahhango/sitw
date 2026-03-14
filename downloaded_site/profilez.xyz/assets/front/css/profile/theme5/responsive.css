@@ -1,0 +1,95 @@
+
+@media screen and (max-width: 1779px) {
+    .navigation-wrapper {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+    .nav-toggoler {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+    .main-wrapper{
+        margin-left: 0;
+    }
+    .nav-toggoler{
+        display: flex;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .service-item-one .service-content{
+        padding: 30px 15px;
+    }
+    .service-item-one .service-content h4.title{
+        font-size: 17px;
+    }
+    .counter-item .content h5 {
+        font-size: 16px;
+    }
+    .blog-post-item-one .entry-content h3.title{
+        font-size: 18px;
+    }
+    .skills-content-box{
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .skills-content-box{
+        margin-bottom: 40px;
+    }
+    .service-item-one .service-content{
+        padding: 30px 15px;
+    }
+    .service-item-one .service-content h4.title{
+        font-size: 17px;
+    }
+    .counter-item .content h5 {
+        font-size: 16px;
+    }
+    .blog-post-item-one .entry-content h3.title{
+        font-size: 18px;
+    }
+    .resume-line{
+        transform: rotate(90deg);
+    }
+    .testimonial-item-one .tm-author-info .author-info h5{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+}
+@media (max-width: 767px) {
+    h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .hero-wrapper-one{
+        padding: 135px 0 150px;
+    }
+    .breadcrumbs-section .page-title h1,
+    .hero-wrapper-one .hero-content h1{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .hero-wrapper-one .hero-content h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .resume-line{
+        display: none;
+    }
+    .resume-item:last-child {
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 349px) {
+    .navigation-wrapper{
+        width: 270px;
+    }
+    .nav-toggoler.active{
+        left: 270px;
+    }
+}
+@media only screen and (min-width: 450px) and (max-width: 767px) {
+    
+}

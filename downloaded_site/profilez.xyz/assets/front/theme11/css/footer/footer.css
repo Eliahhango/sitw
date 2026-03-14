@@ -1,0 +1,63 @@
+/*-----------------------------------
+ Footer CSS 
+-----------------------------------*/
+.footer-area {
+  position: relative;
+  z-index: 1;
+}
+.footer-area::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: rgba(18, 18, 18, 0.9);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.footer-area .vertor .vertor-1 {
+  width: 70px;
+  height: 140px;
+  display: inline-block;
+  background: var(--bs-primary);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.footer-area .vertor .vertor-2 {
+  width: 70px;
+  height: 140px;
+  display: inline-block;
+  background: var(--bs-primary);
+  clip-path: polygon(0 30%, 100% 0, 100% 101%, 0% 100%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.footer-area .socials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.footer-area .socials a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(var(--bs-primary-rgb), 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  color: var(--bs-primary);
+}
+.footer-area .socials a:hover {
+  background: rgba(var(--bs-primary-rgb), 1);
+  color: var(--bs-white);
+  transform: translateY(-5px);
+}
+
+/*# sourceMappingURL=footer.css.map */

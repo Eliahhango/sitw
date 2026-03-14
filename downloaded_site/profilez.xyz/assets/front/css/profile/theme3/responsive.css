@@ -1,0 +1,103 @@
+
+@media screen and (max-width: 1650px) {
+    .hero-area .hero-img{
+        right: 50px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .header-area .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero-area .hero-img{
+        display: none !important;
+    }
+    .hero-area .hero-content span.span {
+        font-size: 60px;
+    }
+    .hero-area .hero-content h1 {
+        font-size: 80px;
+    }
+    .about-area .about-content-box {
+        padding: 180px 0 120px;
+    }
+    .portfolio-area .portfolio-filter-button .filter-btn li {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+    .about-area .about-img{
+        display: none;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .navigation-wrapper .main-menu ul li span {
+        display: none;
+    }
+    .navbar-toggler{
+        display: inline-block;
+    }
+    .main-wrapper{
+        margin-left: 0;
+    }
+    .navigation-wrapper{
+        transform: translateX(-80px);
+        transition: all .3s;
+    }
+    .navigation-wrapper.active{
+        transform: translateX(0px);
+    }
+    .header-area .container-fluid{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-area .about-img{
+        display: none;
+    }
+    .testimonial-area .testimonial-item .testimonial-author-content{
+        flex-direction: column;
+    }
+    .testimonial-area .testimonial-item .author-info{
+        padding-left: 35px;
+    }
+    .testimonial-area .testimonial-item .author-info:before{
+        left: 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-area .hero-content span.span {
+        font-size: 60px;
+    }
+    .hero-area .hero-content h1 {
+        font-size: 100px;
+    }
+    .hero-area .hero-content h1 span.h-l {
+        font-size: 80px;
+    }
+    .hero-area .hero-content h3{
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px) {
+    .hero-area .hero-content span.span {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .hero-area .hero-content h1 {
+        font-size: 50px;
+    }
+    .hero-area .hero-content h1 span.h-l {
+        font-size: 60px;
+    }
+    .hero-area .hero-content h3 {
+        font-size: 16px;
+    }
+    .testimonial-area .testimonial-wrapper:after{
+        display: none;
+    }
+}
+@media only screen and (max-width: 349px) {
+    
+}
+@media only screen and (min-width: 450px) and (max-width: 767px) {
+    
+}

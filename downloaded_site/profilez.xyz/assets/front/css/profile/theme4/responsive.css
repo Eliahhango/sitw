@@ -1,0 +1,82 @@
+
+@media screen and (max-width: 1779px) {
+    
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-area .hero-content h3 {
+        font-size: 18px;
+    }
+    .about-area .about-content-box {
+        margin-left: 50px;
+    }
+    .skill-area .skill-content-box .skill-wrapper .skill-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .skill-area .skill-img {
+        margin-right: 0px;
+        margin-left: -20px;
+    }
+    .blog-area .blog-post-item .entry-content h3.title {
+        font-size: 20px; 
+    }
+}
+@media only screen and (max-width: 991px) {
+    h2{
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .about-area .about-content-box {
+        margin-left: 0px;
+    }
+    .skill-area:after{
+        display: none;
+    }
+    .skill-area .skill-img {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .hero-area .hero-content{
+        margin-bottom: 60px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .skill-area .skill-content-box .skill-wrapper .skill-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 767px) {
+
+    .header-navigation.breakpoint-on {
+        padding: 15px;
+    }
+    .hero-area .hero-content h3 {
+        font-size: 16px;
+        letter-spacing: 0.2em;
+    }
+    .resume-area .resume-wrapper .resume-item {
+        padding: 30px 15px;
+    }
+    .skill-area .skill-content-box .skill-wrapper .skill-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .hero-area .hero-img .img-one {
+        top: 50px;
+        left: 30px;
+    }
+    .hero-area .hero-img span.circle-one {
+        top: 0;
+        right: 70px;
+    }
+    .hero-area .hero-img span.circle-two {
+        right: 20px;
+    }
+}
+@media only screen and (max-width: 349px) {
+    
+}
+@media only screen and (min-width: 450px) and (max-width: 767px) {
+    
+}
