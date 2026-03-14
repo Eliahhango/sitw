@@ -588,13 +588,8 @@ button {
 }
 
 .header-navigation .nav-container .main-menu ul>li.menu-item-has-children>a:after {
-    content: '\f067';
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 600;
-    margin-left: 10px;
-    display: inline-block;
-    color: #1b3255;
-    font-size: 14px;
+    content: none;
+    display: none;
 }
 
 @media (max-width: 767px) {
