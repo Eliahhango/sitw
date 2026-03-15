@@ -1,7 +1,7 @@
 /*===========================
     1. COMMON css
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 html {
     font-size: 100%;
@@ -302,6 +302,81 @@ body {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+/* Reference-style rollout: cleaner typography, surfaces, and animation rhythm. */
+.motion-enhanced {
+    --ref-bg: #efefef;
+    --ref-surface: #ffffff;
+    --ref-dark: #0f172a;
+    --ref-primary: #0b0840;
+    --ref-accent: #f2af29;
+    --ref-border: rgba(15, 23, 42, 0.1);
+    background: var(--ref-bg);
+    font-family: "DM Sans", sans-serif;
+}
+
+.motion-enhanced h1,
+.motion-enhanced h2,
+.motion-enhanced h3,
+.motion-enhanced h4,
+.motion-enhanced h5,
+.motion-enhanced h6,
+.motion-enhanced .title,
+.motion-enhanced .section-heading .title {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.motion-enhanced :is(.header-navigation, .menu-wrapper, .header-area, .header-navbar) {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ref-border);
+}
+
+.motion-enhanced :is(.blog-post-item, .widget, .post-item, .single-service, .single-work, .single-testimonial, .single-pricing, .single-team, .single-counter, .single-box, .single-feature, .portfolio-item, .card, .contact-form, .contact-form-wrapper, .faq-area .card) {
+    background: var(--ref-surface);
+    border: 1px solid var(--ref-border);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.motion-enhanced :is(.main-btn, .btn, .newsletter-btn, button[type="submit"], .page-link) {
+    background: linear-gradient(100deg, var(--ref-accent) 0%, #ffd073 100%);
+    color: #111827;
+    border-color: transparent;
+    box-shadow: 0 12px 28px rgba(242, 175, 41, 0.3);
+}
+
+.motion-enhanced :is(.main-btn, .btn, .newsletter-btn, button[type="submit"], .page-link):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(242, 175, 41, 0.38);
+}
+
+.motion-enhanced .section-heading .tagline {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.motion-enhanced .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.motion-enhanced .reveal-on-scroll.site-reveal-visible {
+    animation: refFadeUp 0.75s cubic-bezier(.22, .61, .36, 1) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes refFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
