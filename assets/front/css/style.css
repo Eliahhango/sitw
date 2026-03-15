@@ -144,6 +144,25 @@ body {
     box-shadow: 0 14px 32px rgba(34, 47, 90, 0.12);
 }
 
+/* Keep v1 header logos compact across listing/detail pages (blogs, contact, faqs, etc.). */
+.header-area-v1 .brand_logo img {
+    width: 56px;
+    height: 56px;
+    max-width: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-area-v1 .mobile-logo img {
+    width: 48px;
+    height: 48px;
+    max-width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
 :is(.main-btn, .btn, .newsletter-btn, button[type="submit"], .page-link) {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 12px 26px rgba(21, 116, 246, 0.12);
