@@ -78,6 +78,19 @@
     transform: translate3d(0, 0, 0);
 }
 
+/* Keep skill percentages visible on light backgrounds. */
+.light-version .skill-section .single-skill-item .chart span,
+.skill-section.bg-white .single-skill-item .chart span {
+    color: #1f2a44 !important;
+    -webkit-text-fill-color: #1f2a44 !important;
+    -webkit-text-stroke: 0 !important;
+}
+
+.light-version .skill-section .single-skill-item .title,
+.skill-section.bg-white .single-skill-item .title {
+    color: #1f2a44 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
