@@ -2434,6 +2434,56 @@ ul.pagination li {
     padding: 20px 0;
 }
 
+/* Global fallback: keep newsletter UI aligned even if page-level CSS overrides exist. */
+.newsletter-widget form .form_gorup,
+.newsletter-widget form .form_group {
+    position: relative !important;
+}
+
+.newsletter-widget form .form_gorup input[type=email],
+.newsletter-widget form .form_group input[type=email] {
+    width: 100% !important;
+    padding-right: 72px !important;
+}
+
+.newsletter-widget form .form_gorup .newsletter-btn,
+.newsletter-widget form .form_group .newsletter-btn {
+    position: absolute !important;
+    top: 4px !important;
+    right: 5px !important;
+    left: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.newsletter-widget .social-link,
+.newsletter-widget .social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.newsletter-widget .social-link li,
+.newsletter-widget .social-links li {
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+.newsletter-widget .social-link li a,
+.newsletter-widget .social-links li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 /*---------------------------
