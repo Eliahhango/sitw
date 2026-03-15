@@ -56,9 +56,176 @@ body, body.light-version { background: #ffffff !important; color: #1f2937 !impor
 .main-btn, .filled-btn { background: #0B0840 !important; color: #ffffff !important; border-color: #0B0840 !important; }
 .template-footer .overlay { display: none !important; }
 </style>
+        <style id="elitechwiz-home-enhanced-motion">
+    body.elite-home-v2 {
+        --eh-primary: #0b0840;
+        --eh-accent: #1574f6;
+        --eh-surface: #f5f8ff;
+        --eh-border: rgba(11, 8, 64, 0.08);
+        background:
+            radial-gradient(circle at 12% 9%, rgba(21, 116, 246, 0.14), transparent 26%),
+            radial-gradient(circle at 84% 14%, rgba(11, 8, 64, 0.11), transparent 22%),
+            linear-gradient(180deg, #f8fbff 0%, #ffffff 46%, #f5f8ff 100%) !important;
+        background-attachment: fixed;
+    }
+
+    .elite-home-v2 .template-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.86) !important;
+        border-bottom: 1px solid var(--eh-border);
+    }
+
+    .elite-home-v2 .hero-area {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        margin: 18px 14px 0;
+        background: linear-gradient(138deg, #ffffff 0%, #f4f8ff 60%, #eaf2ff 100%) !important;
+    }
+
+    .elite-home-v2 .hero-area::before,
+    .elite-home-v2 .hero-area::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .elite-home-v2 .hero-area::before {
+        width: 380px;
+        height: 380px;
+        right: -120px;
+        top: -120px;
+        background: radial-gradient(circle, rgba(21, 116, 246, 0.2), transparent 72%);
+        animation: ehFloat 9s ease-in-out infinite;
+    }
+
+    .elite-home-v2 .hero-area::after {
+        width: 300px;
+        height: 300px;
+        left: -110px;
+        bottom: -120px;
+        background: radial-gradient(circle, rgba(11, 8, 64, 0.15), transparent 72%);
+        animation: ehFloat 11s ease-in-out infinite reverse;
+    }
+
+    .elite-home-v2 .hero-content .hero-title {
+        letter-spacing: 0.02em;
+        text-shadow: 0 8px 32px rgba(11, 8, 64, 0.16);
+    }
+
+    .elite-home-v2 .hero-img {
+        border-radius: 26px;
+        box-shadow: 0 22px 48px rgba(11, 8, 64, 0.22);
+        transform: translateY(0);
+        animation: ehFloatSoft 6.5s ease-in-out infinite;
+    }
+
+    .elite-home-v2 .about-img img,
+    .elite-home-v2 .single-service-box,
+    .elite-home-v2 .single-latest-post,
+    .elite-home-v2 .testimonial-box,
+    .elite-home-v2 .project-item,
+    .elite-home-v2 .contact-form {
+        border: 1px solid var(--eh-border);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+    }
+
+    .elite-home-v2 .single-service-box,
+    .elite-home-v2 .single-latest-post,
+    .elite-home-v2 .testimonial-box,
+    .elite-home-v2 .project-item,
+    .elite-home-v2 .contact-form,
+    .elite-home-v2 .about-img img {
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .elite-home-v2 .single-service-box:hover,
+    .elite-home-v2 .single-latest-post:hover,
+    .elite-home-v2 .testimonial-box:hover,
+    .elite-home-v2 .project-item:hover,
+    .elite-home-v2 .about-img img:hover,
+    .elite-home-v2 .contact-form:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 48px rgba(11, 8, 64, 0.16);
+        border-color: rgba(21, 116, 246, 0.25);
+    }
+
+    .elite-home-v2 .section-heading .tagline {
+        letter-spacing: 0.15em;
+    }
+
+    .elite-home-v2 .main-btn,
+    .elite-home-v2 .filled-btn {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .elite-home-v2 .main-btn::after,
+    .elite-home-v2 .filled-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -140%;
+        width: 85%;
+        height: 100%;
+        transform: skewX(-24deg);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36), transparent);
+        transition: left 0.55s ease;
+    }
+
+    .elite-home-v2 .main-btn:hover::after,
+    .elite-home-v2 .filled-btn:hover::after {
+        left: 150%;
+    }
+
+    .elite-home-v2 .eh-reveal {
+        opacity: 0;
+        transform: translate3d(0, 26px, 0);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+        transition-delay: var(--eh-delay, 0ms);
+        will-change: transform, opacity;
+    }
+
+    .elite-home-v2 .eh-reveal.is-inview {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    @keyframes ehFloat {
+        0%,
+        100% { transform: translate3d(0, 0, 0); }
+        50% { transform: translate3d(0, 18px, 0); }
+    }
+
+    @keyframes ehFloatSoft {
+        0%,
+        100% { transform: translate3d(0, 0, 0); }
+        50% { transform: translate3d(0, -10px, 0); }
+    }
+
+    @media (max-width: 991px) {
+        .elite-home-v2 .hero-area {
+            margin: 10px 8px 0;
+            border-radius: 18px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .elite-home-v2 *,
+        .elite-home-v2 *::before,
+        .elite-home-v2 *::after {
+            animation: none !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+        </style>
 </head>
 
-<body class="light-version">
+    <body class="light-version elite-home-v2">
     <!--====== Start Template Header ======-->
     <header class="template-header">
         <div class="container-fluid">
@@ -762,6 +929,37 @@ body, body.light-version { background: #ffffff !important; color: #1f2937 !impor
                     position: "right"
                 });
             });
+
+            (function () {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    return;
+                }
+
+                var revealTargets = document.querySelectorAll(
+                    '.section-heading, .about-text, .about-img, .single-skill-item, .single-service-box, .counter-item, .project-item, .testimonial-box, .single-latest-post, .contact-form'
+                );
+
+                revealTargets.forEach(function (el, index) {
+                    el.classList.add('eh-reveal');
+                    el.style.setProperty('--eh-delay', ((index % 6) * 80) + 'ms');
+                });
+
+                var observer = new IntersectionObserver(function (entries, io) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-inview');
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.16,
+                    rootMargin: '0px 0px -8% 0px'
+                });
+
+                revealTargets.forEach(function (el) {
+                    observer.observe(el);
+                });
+            })();
         </script>
         
     </body>
